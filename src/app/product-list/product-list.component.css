@@ -39,6 +39,10 @@
     z-index: 5555;
     margin-right: 3px;
   }
+
+  .product-List {
+    margin-top: 69px !important;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -70,7 +74,7 @@
 
   .cardList>*:not(:last-child) {
     margin: 15px;
-    margin-top: 72px !important;
+    margin-top: 26px !important;
   }
 
   .nameBlock {
@@ -79,6 +83,16 @@
     margin-top: -2px !important;
     z-index: 5555;
     margin-right: 7px !important;
+  }
+
+  .product-List {
+    margin-top: -11px !important;
+  }
+}
+
+@media screen and (min-width: 1024px) and (min-width: 1440px) {
+  .product-List {
+    margin-top: -11px !important;
   }
 }
 
@@ -210,4 +224,9 @@
 .searchBar {
   margin-top: 9% !important;
   margin-left: 4%;
+}
+
+.product-List {
+  margin: 20px;
+  margin-top: 73px;
 }

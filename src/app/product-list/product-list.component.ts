@@ -42,8 +42,8 @@ export class ProductListComponent implements OnInit {
   }
 
   searchProduct(event) {
-    // console.log('eventnnn', event.target.value);
-    const data = event.target.value;
+    console.log('eventnnn', event);
+    const data = event;
     this.sharedService.searchByName(data).subscribe((res: any) => {
       // console.log('flter data', res);
       if (res && res.length > 0) {

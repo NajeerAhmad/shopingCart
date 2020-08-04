@@ -9,4 +9,71 @@
   width: -webkit-fill-available;
   top: 0;
   z-index: 9999;
+  width: 100%;
+}
+
+@media screen and (min-width: 320px) and (max-width: 380px) {
+  .cart-icon {
+    font-size: 15px !important;
+    position: absolute;
+    left: 13px;
+    top: -4px !important;
+  }
+
+  .user-admin {
+    position: absolute;
+    top: -25px;
+    font-size: 16px !important;
+  }
+
+  .inputform {
+    display: block;
+    width: 100%;
+    padding: -0.625rem -0.25rem !important;
+    font-size: 1rem;
+    line-height: 0.5 !important;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem !important;
+    transition: border-color .15s ease-in-out,
+      box-shadow .15s ease-in-out;
+  }
+
+  .navbar {
+    min-height: 140px !important;
+    display: flex;
+    align-items: center;
+    background-color: #1976d2;
+    color: #fff;
+    font-weight: 300 !important;
+    position: fixed;
+    width: -webkit-fill-available;
+    top: 0;
+    z-index: 9999;
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 321px) and (max-width: 768px) {
+  .cart-icon {
+    font-size: 20px !important;
+    position: absolute;
+    left: 13px;
+    top: 5px !important;
+  }
+}
+
+.cart-icon {
+  font-size: 23px;
+  position: absolute;
+  left: 13px;
+  top: -4px;
+}
+
+.user-admin {
+  position: absolute;
+  top: -19px;
+  font-size: 21px;
 }
