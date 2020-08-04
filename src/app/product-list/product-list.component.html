@@ -1,4 +1,9 @@
-<div class="row m-2">
+<div class="row searchBar">
+  <div class="col-xs-12 col-md-6 col-lg-6">
+    <input type="text" class="form-control" (keypress)="searchProduct($event)" placeholder="search by ProductName">
+  </div>
+</div>
+<div class="row ml-2 mr-2" style="margin-top: -40px;">
   <div class="col-xs-12 col-md-4 col-lg-4 filter-box">
     <div class="form-group">
       <div class="form-group">

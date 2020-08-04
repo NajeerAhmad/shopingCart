@@ -31,6 +31,14 @@
     margin: 15px;
     margin-top: 72px !important;
   }
+
+  .nameBlock {
+    font-size: 12px;
+    margin-left: 11px;
+    margin-top: -2px;
+    z-index: 5555;
+    margin-right: 3px;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -64,9 +72,15 @@
     margin: 15px;
     margin-top: 72px !important;
   }
+
+  .nameBlock {
+    font-size: 12px;
+    margin-left: 5px !important;
+    margin-top: -2px !important;
+    z-index: 5555;
+    margin-right: 7px !important;
+  }
 }
-
-
 
 .cardList {
   display: flex;
@@ -134,9 +148,7 @@
 
 .filter-box {
   margin-top: 72px;
-  /* padding-left: 44px; */
   border: 1px solid #29252526;
-  /* padding: 10px; */
 }
 
 .check-box-block {
@@ -162,7 +174,7 @@
 
 .nameBlock {
   font-size: 12px;
-  margin-left: -18px;
+  margin-left: 0px;
   margin-top: -2px;
   z-index: 5555;
   margin-right: 10px;
@@ -193,4 +205,9 @@
   justify-content: flex-start;
   border: 1px solid #29252526;
   padding: 10px;
+}
+
+.searchBar {
+  margin-top: 9% !important;
+  margin-left: 4%;
 }

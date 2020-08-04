@@ -17,5 +17,10 @@ export class SharedService {
     return this.http.get(url);
   }
 
+  searchByName(data) {
+    const url = `https://xebiascart.herokuapp.com/products?title=${data}`
+    return this.http.get(url);
+  }
+
 
 }
