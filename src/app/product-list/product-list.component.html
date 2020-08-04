@@ -1,0 +1,21 @@
+<div class="cardList">
+  <ng-container *ngFor="let product of productList">
+    <div class="cardListItem">
+      <div class="image-block">
+        <img class="product-img" [src]="product.image" width="100%">
+      </div>
+      <div class="productContnt">
+        <div>
+          Product: {{product.title}}
+        </div>
+        <div>
+          Brand: {{product.brand}}
+        </div>
+        <div>
+          color: {{product.colour.color}}
+        </div>
+      </div>
+      <button type="button" class="button">Add</button>
+    </div>
+  </ng-container>
+</div>
