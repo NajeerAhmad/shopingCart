@@ -1,21 +1,120 @@
-<div class="cardList">
-  <ng-container *ngFor="let product of productList">
-    <div class="cardListItem">
-      <div class="image-block">
-        <img class="product-img" [src]="product.image" width="100%">
+<div class="row m-2">
+  <div class="col-xs-12 col-md-4 col-lg-4 filter-box">
+    <div class="form-group">
+      <div class="form-group">
+        <label>Color</label>
       </div>
-      <div class="productContnt">
-        <div>
-          Product: {{product.title}}
-        </div>
-        <div>
-          Brand: {{product.brand}}
-        </div>
-        <div>
-          color: {{product.colour.color}}
-        </div>
+      <div class="color-list">
+        <ng-container *ngFor="let color of colorArray">
+          <div class="check-box-block">
+            <input type="checkbox" aria-label="Checkbox for following text input">
+          </div>
+          <div class="nameBlock">
+            {{color.colorName}}
+          </div>
+        </ng-container>
       </div>
-      <button type="button" class="button">Add</button>
     </div>
-  </ng-container>
+    <div class="form-group">
+      <div class="form-group">
+        <label>Brand</label>
+      </div>
+      <div class="brand-list">
+        <ng-container *ngFor="let color of brandArray">
+          <div class="check-box-block">
+            <input type="checkbox" aria-label="Checkbox for following text input">
+          </div>
+          <div class="nameBlock">
+            {{color.colorName}}
+          </div>
+        </ng-container>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="form-group">
+        <label>Price</label>
+      </div>
+      <div class="price-list">
+        <div class="row">
+          <div class="col-xs-12 col-md-6 col-lg-6">
+            <!-- formControlName="nsqfLevel" -->
+            <select class="form-control m-input" name="option">
+              <option value="" disabled selected>
+                Min
+              </option>
+              <option class="placeholder" *ngFor="let price of priceArray" [value]="price">
+                {{price}}
+              </option>
+            </select>
+          </div>
+          <div class="col-xs-12 col-md-6 col-lg-6">
+            <!-- formControlName="nsqfLevel" -->
+            <select class="form-control m-input" name="option">
+              <option value="" disabled selected>
+                Max
+              </option>
+              <option class="placeholder" *ngFor="let price of priceArray" [value]="price">
+                {{price}}
+              </option>
+            </select>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="form-group">
+        <label>Discount</label>
+      </div>
+      <div class="discount-list">
+        <div class="row">
+          <div class="col-xs-12 col-md-6 col-lg-6">
+            <!-- formControlName="nsqfLevel" -->
+            <select class="form-control m-input" name="option">
+              <option value="" disabled selected>
+                Min
+              </option>
+              <option class="placeholder" *ngFor="let discount of discountArray" [value]="discount">
+                {{discount}}
+              </option>
+            </select>
+          </div>
+          <div class="col-xs-12 col-md-6 col-lg-6">
+            <!-- formControlName="nsqfLevel" -->
+            <select class="form-control m-input" name="option">
+              <option value="" disabled selected>
+                Max
+              </option>
+              <option class="placeholder" *ngFor="let discount of discountArray" [value]="discount">
+                {{discount}}
+              </option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-xs-12 col-md-8 col-lg-8">
+    <div class="cardList">
+      <ng-container *ngFor="let product of productList">
+        <div class="cardListItem">
+          <div class="image-block">
+            <img class="product-img" [src]="product.image" width="100%">
+          </div>
+          <div class="productContnt">
+            <div>
+              Product: {{product.title}}
+            </div>
+            <div>
+              Brand: {{product.brand}}
+            </div>
+            <div>
+              color: {{product.colour.color}}
+            </div>
+          </div>
+          <button type="button" class="button">Add</button>
+        </div>
+      </ng-container>
+    </div>
+  </div>
 </div>
