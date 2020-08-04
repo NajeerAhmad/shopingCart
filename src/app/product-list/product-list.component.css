@@ -45,7 +45,7 @@
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 324px) and (max-width: 768px) {
 
   .cardListItem {
     flex: 0 1 calc(33.3% - 32px);
@@ -90,11 +90,11 @@
   }
 }
 
-@media screen and (min-width: 1024px) and (min-width: 1440px) {
+/* @media screen and (min-width: 1024px) and (min-width: 1440px) {
   .product-List {
     margin-top: -11px !important;
   }
-}
+} */
 
 .cardList {
   display: flex;

@@ -24,7 +24,9 @@ export class ProductListComponent implements OnInit {
   priceArray = [100, 200, 300];
   discountArray = [10, 20, 30];
   colorName: any;
-  brand: string;
+  brand: any;
+  count = 0;
+  price: any
 
   constructor(private sharedService: SharedService) { }
 
@@ -77,6 +79,10 @@ export class ProductListComponent implements OnInit {
         this.productList = res;
       }
     });
+  }
+
+  countItem() {
+    this.count += 1;
   }
 
 }

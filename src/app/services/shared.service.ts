@@ -8,8 +8,9 @@ export class SharedService {
 
   constructor(private http: HttpClient) { }
 
-  login() {
-    const url = 'https://xebiascart.herokuapp.com/users?username=amigo'
+  login(data) {
+    const url = `https://xebiascart.herokuapp.com/users?username=${data.userName}`
+    return this.http.get(url)
   }
 
   getProductList() {
