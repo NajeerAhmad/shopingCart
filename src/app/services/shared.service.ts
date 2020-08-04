@@ -22,5 +22,10 @@ export class SharedService {
     return this.http.get(url);
   }
 
+  searchByProperties(filterData) {
+    const url = `https://xebiascart.herokuapp.com/filters`
+    return this.http.get(url + filterData);
+  }
+
 
 }

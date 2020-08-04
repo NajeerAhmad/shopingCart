@@ -12,10 +12,10 @@
       <div class="color-list">
         <ng-container *ngFor="let color of colorArray">
           <div class="check-box-block">
-            <input type="checkbox" aria-label="Checkbox for following text input">
+            <input type="checkbox" (change)="onChange(color, $event.target.checked)">
           </div>
           <div class="nameBlock">
-            {{color.colorName}}
+            {{color.colour}}
           </div>
         </ng-container>
       </div>
@@ -25,12 +25,12 @@
         <label>Brand</label>
       </div>
       <div class="brand-list">
-        <ng-container *ngFor="let color of brandArray">
+        <ng-container *ngFor="let brand of brandArray">
           <div class="check-box-block">
-            <input type="checkbox" aria-label="Checkbox for following text input">
+            <input type="checkbox" (change)="onChangeBrand(brand, $event.target.checked)">
           </div>
           <div class="nameBlock">
-            {{color.colorName}}
+            {{brand.brand}}
           </div>
         </ng-container>
       </div>
