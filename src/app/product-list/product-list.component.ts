@@ -65,15 +65,18 @@ export class ProductListComponent implements OnInit {
   onChangeBrand(data: string, isChecked: boolean) {
     // console.log('>>>>>>brand', data);
     this.brand = data;
+    this.searchBasedProperty();
     // console.log('isChecked22', isChecked)
     // this.searchBasedProperty()
   }
 
   selectPriceChange() {
+    this.searchBasedProperty();
     // console.log('price', this.price);
   }
 
   selectDiscountChange() {
+    this.searchBasedProperty();
     // console.log('price', this.discount);
   }
 

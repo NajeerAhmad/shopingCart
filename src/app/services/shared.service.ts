@@ -25,8 +25,8 @@ export class SharedService {
 
   searchByProperties(filterData) {
     console.log('filterData', filterData);
-    const url = `https://xebiascart.herokuapp.com/filters&color=`;
-    return this.http.get(url + filterData.colour);
+    const url = `https://xebiascart.herokuapp.com/filters&color=${filterData.color}&brand=${filterData.brand}&price=${filterData.price}$discount=${filterData.discount}`;
+    return this.http.get(url);
   }
 
 
