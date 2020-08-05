@@ -26,7 +26,8 @@ export class ProductListComponent implements OnInit {
   colorName: any;
   brand: any;
   count = 0;
-  price: any
+  price: any;
+  discount: any;
 
   constructor(private sharedService: SharedService) { }
 
@@ -55,23 +56,33 @@ export class ProductListComponent implements OnInit {
   }
 
   onChange(data: string, isChecked: boolean) {
-    console.log('>>>>>>data', data);
+    // console.log('>>>>>>data', data);
     this.colorName = data;
-    console.log('isChecked', isChecked)
-    this.searchBasedProperty()
+    // console.log('isChecked', isChecked)
+    this.searchBasedProperty();
   }
 
   onChangeBrand(data: string, isChecked: boolean) {
-    console.log('>>>>>>brand', data);
-    this.brand = data
-    console.log('isChecked22', isChecked)
-    this.searchBasedProperty()
+    // console.log('>>>>>>brand', data);
+    this.brand = data;
+    // console.log('isChecked22', isChecked)
+    // this.searchBasedProperty()
+  }
+
+  selectPriceChange() {
+    // console.log('price', this.price);
+  }
+
+  selectDiscountChange() {
+    // console.log('price', this.discount);
   }
 
   searchBasedProperty() {
     const filterData = {
       color: this.colorName ? this.colorName : '',
-      brand: this.brand ? this.brand : ''
+      brand: this.brand ? this.brand : '',
+      price: this.price ? this.price : '',
+      discount: this.discount ? this.discount : ''
     }
     this.sharedService.searchByProperties(filterData).subscribe((res: any) => {
       // console.log('flter data', res);
@@ -84,5 +95,4 @@ export class ProductListComponent implements OnInit {
   countItem() {
     this.count += 1;
   }
-
 }

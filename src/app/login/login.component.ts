@@ -11,6 +11,7 @@ import { Router } from '@angular/router';
 export class LoginComponent implements OnInit {
   loginForm: FormGroup;
   currentUserName: any;
+  userName: void;
 
   constructor(
     private fb: FormBuilder,
@@ -28,14 +29,15 @@ export class LoginComponent implements OnInit {
   }
 
   onSubmit() {
-    console.log('loin form', this.loginForm.value);
+    // console.log('loin form', this.loginForm.value);
     this.sharedService.login(this.loginForm.value).subscribe((res: any) => {
-      console.log('sdjshjdsrelogin', res)
+      console.log('sdjshjdsrelogin', res);
       if (res && res.length > 0) {
         this.currentUserName = res[0].fullName;
-        this.router.navigate(['./product-list'])
+        this.userName = localStorage.setItem('user', this.currentUserName);
+        this.router.navigate(['./product-list']);
       }
-    })
+    });
   }
 
 }

@@ -9,10 +9,12 @@ export class HeaderComponent implements OnInit {
   @Output() dataSearch = new EventEmitter<any>();
   @Input() count: any;
   @Input() username: any;
+  userName: any;
 
   constructor() { }
 
   ngOnInit() {
+    this.userName = localStorage.getItem('user');
   }
 
   searchProduct(event) {
