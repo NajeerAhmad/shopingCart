@@ -99,13 +99,16 @@
           </div>
           <div class="productContnt">
             <div>
-              Product: {{product.title}}
+              <b style="color: black;">Product</b>: {{product.title}}
             </div>
             <div>
-              Brand: {{product.brand}}
+              <b>Brand</b>: {{product.brand}}
             </div>
             <div>
-              color: {{product.colour.color}}
+              <b>Color</b>: {{product.colour.color}}
+            </div>
+            <div>
+              <span>$</span><b>Price</b>: {{product.price.final_price}}
             </div>
           </div>
           <button type="button" class="button" (click)="countItem()">Add</button>
